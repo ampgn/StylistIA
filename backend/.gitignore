@@ -35,10 +35,12 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# dotenv environment variable files
+# Ignorer les fichiers d'environnement
 .env
+.env.*
 backend/env.ts
-.env.ts
+
+# Fichiers spécifiques à certains environnements
 .env.development.local
 .env.test.local
 .env.production.local
