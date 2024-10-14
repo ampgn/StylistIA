@@ -12,21 +12,14 @@ export class User extends Document {
   @Prop({ required: true, unique: true })
   email: string;
 
-  @Prop()
+  @Prop({ required: true })
+  password: string; // Mot de passe haché
+
+  @Prop({ type: [String], default: [] })
   preferences: string[];
 
-  @Prop({
-    type: [
-      {
-        date: { type: Date, required: true },
-        items: { type: [String], required: true },
-      },
-    ],
-  })
-  outfitHistory: {
-    date: Date;
-    items: string[];
-  }[];
+  @Prop({ type: [Object], default: [] })
+  outfitHistory: any[];
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);

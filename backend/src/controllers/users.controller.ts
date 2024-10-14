@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
-import { CreateUserDto } from 'src/dto/create-user.dti';
+import { CreateUserDto } from 'src/auth/create-user.dto';
 /* import { Observable, of } from 'rxjs'; */
 import { User } from 'src/schemas/users.schema';
 import { UsersService } from 'src/services/users.service';
