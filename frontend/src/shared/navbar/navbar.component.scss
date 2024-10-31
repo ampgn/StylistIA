@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+.menu-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background: #f9fafb;
+    color: #4b5563;
+    border: none; /* Supprime la bordure */
+    position: relative;
+}
+
+.menu-left {
+    flex: 1; /* Occupe l'espace disponible à gauche */
+}
+
+.logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.connexion {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.link-end {
+    font-size: 16px;
+    color: black;
+}
+
+.logo-text {
+    font-family: "Major Mono Display", monospace;
+    color: black;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-menuitem-link, .link-end {
+    font-family: "Major Mono Display", monospace;
+    text-decoration: none;
+    color: black;
+    padding: 5px !important;
+}
+
+::ng-deep a.p-ripple.p-element.p-menuitem-link {
+    font-family: "Major Mono Display", monospace;
+    font-size: 16px;
+    color: black !important;
+    padding: 8px;
+}
+
+::ng-deep a.p-ripple.p-element.p-menuitem-link.p-menuitem-text {
+    color: black !important;
+}
+
+::ng-deep .menu-navbar {
+    border: none;
+    background: transparent;
+}
+
+::ng-deep .p-menubar-start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

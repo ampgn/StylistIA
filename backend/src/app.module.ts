@@ -14,7 +14,9 @@ import { JwtService } from '@nestjs/jwt';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(environment.DATABASE_URI),
+    MongooseModule.forRoot(environment.DATABASE_URI, {
+      dbName: 'stylist-ia',
+    }),
     MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
   ],
   controllers: [AppController, UserController, AuthController],

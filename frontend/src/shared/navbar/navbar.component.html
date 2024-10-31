@@ -1,0 +1,40 @@
+<div class="card">
+    <p-menubar [model]="items" styleClass="menu-navbar">
+        <!-- Affichage des éléments du menu -->
+         
+        <ng-template pTemplate="start">
+            <ng-template pTemplate="item" let-item let-root="root">
+                <a pRipple class="flex align-items-center p-menuitem-link">
+                    <span class="ml-2">{{ item.label }}</span>
+                </a>
+            </ng-template>
+        </ng-template>
+
+        <!-- Ajout du logo centré en dehors de pTemplate -->
+        <ng-template pTemplate="start" class="start-item-logo">
+            <div class="logo-center">
+                <span class="logo-text">Stylist</span>
+                <span class="logo-text">IA</span>
+            </div>
+        </ng-template>
+
+        <!-- Partie 'end' de la navbar avec un lien de connexion et des icônes -->
+        <ng-template pTemplate="end">
+            <div class="p-menuitem-link flex align-items-center">
+                <!-- Lien vers la page de connexion -->
+                <a routerLink="" class="mr-3 link-end connexion">Connexion</a>
+                
+                <!-- Icônes (par exemple, PrimeIcons) qui sont également des liens -->
+                <a pRipple class="p-menuitem-link mr-2 link-end" href="#" target="_blank">
+                    <i class="pi pi-camera"></i>
+                </a>
+                <a pRipple class="p-menuitem-link mr-2 link-end" href="#" target="_blank">
+                    <i class="pi pi-search"></i>
+                </a>
+                <a pRipple class="p-menuitem-link link-end" href="#" target="_blank">
+                    <i class="pi pi-bell"></i>
+                </a>
+            </div>
+        </ng-template>
+    </p-menubar>
+</div>
